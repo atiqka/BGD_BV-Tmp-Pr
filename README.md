@@ -69,5 +69,213 @@ The workflow integrates high-resolution temperature and precipitation datasets f
  
 --- 
 
+### Data Sources
+
+This project integrates multiple globally recognized geospatial and climate datasets through Google Earth Engine and complementary open-source spatial data repositories. The datasets were selected based on their scientific credibility, global coverage, spatial resolution, temporal consistency, and widespread use within climate, environmental, and disaster risk research. Data sources and details are as below. 
+
+## 1. ERA5-Land Climate Reanalysis
+
+## Overview
+
+ERA5-Land is a global land-surface reanalysis dataset produced by the European Centre for Medium-Range Weather Forecasts (ECMWF). It provides a physically consistent reconstruction of historical climate conditions by combining numerical weather models with observational data. ERA5-Land is specifically designed to improve land-surface representation relative to the standard ERA5 reanalysis. 【1-99390a】
+
+## Dataset Used
+
+```r
+ECMWF/ERA5_LAND/HOURLY
+```
+
+## Variable
+
+```r
+temperature_2m
+```
+
+## Description
+
+The variable represents near-surface air temperature measured approximately two meters above ground level.
+
+## Temporal Coverage
+
+```text
+January 1950 – Present
+```
+
+## Temporal Resolution
+
+```text
+Hourly
+```
+
+## Spatial Resolution
+
+```text
+0.1° × 0.1°
+(~9 km native resolution)
+```
+
+## Data Provider
+
+```text
+European Centre for Medium-Range Weather Forecasts (ECMWF)
+Copernicus Climate Change Service (C3S)
+```
+
+
+---
+
+## 2. CHIRPS Precipitation
+
+## Overview
+
+Climate Hazards Group InfraRed Precipitation with Stations (CHIRPS) is a long-term quasi-global rainfall dataset developed by the Climate Hazards Center at the University of California, Santa Barbara. CHIRPS combines satellite imagery with ground-based station observations to produce gridded precipitation estimates suitable for drought monitoring, climate assessment, and hydrological analysis. 【2-5559f6】
+
+## Dataset Used
+
+```r
+UCSB-CHG/CHIRPS/DAILY
+```
+
+## Variable
+
+```r
+precipitation
+```
+
+## Description
+
+Daily precipitation estimates derived from infrared satellite observations merged with in-situ station measurements.
+
+## Temporal Coverage
+
+```text
+1981 – Present
+```
+
+## Temporal Resolution
+
+```text
+Daily
+```
+
+## Spatial Resolution
+
+```text
+0.05°
+(~5.6 km)
+```
+
+## Data Provider
+
+```text
+Climate Hazards Group (CHG)
+University of California, Santa Barbara (UCSB)
+```
+
+
+---
+
+## 3. Administrative Boundaries
+
+## Overview
+
+National boundaries for Bangladesh were obtained using the GADM database through the R package geodata.
+
+GADM is one of the most widely used global administrative boundary databases and provides harmonized boundary datasets for countries and subnational administrative units worldwide. The current database contains hundreds of thousands of administrative areas globally. 【3-c058fb】【4-97bdab】
+
+## Dataset
+
+```r
+geodata::gadm("BGD", level = 0)
+```
+
+## Administrative Level
+
+```text
+ADM0 (National Boundary)
+```
+
+## Data Provider
+
+```text
+GADM Database of Global Administrative Areas
+```
+
+---
+
+## 4. Digital Elevation Model (DEM)
+
+## Overview
+
+Terrain elevation data are obtained using the elevatr package, which accesses Shuttle Radar Topography Mission (SRTM) elevation products.
+
+The SRTM mission was jointly conducted by NASA and the National Geospatial-Intelligence Agency (NGA) and produced one of the most widely used global digital elevation datasets. SRTM data provide near-global land-surface elevation coverage at approximately 30-meter resolution. 【5-933c94】【6-3d171d】
+
+## Dataset
+
+```text
+SRTM Digital Elevation Model
+```
+
+## Resolution
+
+```text
+1 Arc-Second
+(~30 meters)
+```
+
+## Coverage
+
+```text
+Global land surface between 60°N and 56°S
+```
+
+## Data Provider
+
+```text
+NASA
+United States Geological Survey (USGS)
+National Geospatial-Intelligence Agency (NGA)
+```
+
+
+---
+
+## Data Processing Workflow
+
+The workflow integrates the above datasets through the following sequence:
+
+```text
+ERA5-Land Temperature
+          │
+          ▼
+      Earth Engine
+          │
+          ▼
+  Multi-Year Mean Surface
+          │
+          ▼
+          ├───────────────┐
+          │               │
+          ▼               ▼
+CHIRPS Rainfall      Bangladesh Boundary
+          │               │
+          ▼               ▼
+  Multi-Year Total     National Mask
+          │               │
+          └───────┬───────┘
+                  ▼
+        Raster Harmonization
+                  ▼
+      Bivariate Classification
+                  ▼
+          2D Climate Mapping
+                  ▼
+            DEM Integration
+                  ▼
+          3D Visualization
+```
+
+---
 
 
