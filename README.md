@@ -15,7 +15,7 @@ Traditional climate maps generally visualize one variable at a time, which can l
 - Cool and dry
 - Intermediate climate zones
  
-Such classifications provide a richer understanding of climate dynamics compared to single-variable maps. This exercise demonstrates how cloud-based climate datasets available through Google Earth Engine can be combined with modern cartographic techniques in R to produce both 2D and 3D climate visualizations.
+Such classifications provide a richer understanding of climate dynamics compared to single-variable maps. This exercise demonstrates how cloud-based climate datasets available through Google Earth Engine can be combined with modern cartographic techniques in R to produce both 2D and 3D climate visualizations. Acknowledgment for the initial methodology goes to Milos. 
 
 The output map is shown here. https://github.com/atiqka/BGD_BV-Tmp-Pr/blob/main/BGD_Bivariate-tmp-pr.png
  
