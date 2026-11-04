@@ -1,10 +1,11 @@
 # Bangladesh Bivariate Climate Mapping and 3D Visualization (2018–2022)
 
- Author: Atiq Kainan Ahmed. Email: atiqka@yahoo.com
- 
+Author: Atiq Kainan Ahmed. Email: atiqka@yahoo.com
+
+
 ## Background
  
-Climate conditions across Bangladesh are characterized by substantial spatial variability. While some regions experience higher rainfall and lower temperatures due to geographic and atmospheric influences, other regions exhibit relatively warmer and drier climate patterns. Understanding these spatial differences is important for climate adaptation planning, drought and flood risk assessments, agricultural planning, environmental monitoring, and climate finance prioritization.
+Climate conditions across Bangladesh are characterized by substantial spatial variability. While some regions experience higher rainfall and lower temperatures because of geographic and atmospheric influences, other regions have warmer, drier climate patterns. Understanding these spatial differences is important for climate adaptation planning, drought and flood risk assessments, agricultural planning, environmental monitoring, and climate finance prioritization.
  
 Traditional climate maps generally visualize one variable at a time, which can limit the interpretation of interactions between climatic factors. A bivariate mapping approach allows temperature and precipitation to be analyzed simultaneously, enabling users to identify areas that are:
  
@@ -14,9 +15,9 @@ Traditional climate maps generally visualize one variable at a time, which can l
 - Cool and dry
 - Intermediate climate zones
  
-Such classifications provide a richer understanding of climate dynamics compared to single-variable maps.
- 
-This project demonstrates how cloud-based climate datasets available through Google Earth Engine can be combined with modern cartographic techniques in R to produce both 2D and 3D climate visualizations.
+Such classifications provide a richer understanding of climate dynamics compared to single-variable maps. This exercise demonstrates how cloud-based climate datasets available through Google Earth Engine can be combined with modern cartographic techniques in R to produce both 2D and 3D climate visualizations.
+
+The output map is shown here. https://github.com/atiqka/BGD_BV-Tmp-Pr/blob/main/BGD_Bivariate-tmp-pr.png
  
 ---
  
