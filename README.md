@@ -277,6 +277,7 @@ CHIRPS Rainfall      Bangladesh Boundary
 ---
 
 ## License
+
 MIT License
 
 Copyright (c) 2026 Atiq Kainan Ahmed.
