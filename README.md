@@ -30,7 +30,7 @@ The primary objective of this workflow is to create a high-resolution bivariate 
 for the period:
  
 ```text
-January 2018 – December 2022 (duration was aligned with the period of latest DHS, BDHS 2022).
+January 2018 – December 2022 (duration was aligned with the period of the latest DHS, BDHS 2022).
 ```
  
 Specific objectives include:
@@ -89,7 +89,7 @@ Data Provider: European Centre for Medium-Range Weather Forecasts (ECMWF), Coper
 
 ## 2. CHIRPS Precipitation
 
-Climate Hazards Group InfraRed Precipitation with Stations (CHIRPS) is a long-term quasi-global rainfall dataset developed by the Climate Hazards Center at the University of California, Santa Barbara. CHIRPS combines satellite imagery with ground-based station observations to produce gridded precipitation estimates suitable for drought monitoring, climate assessment, and hydrological analysis. 【2-5559f6】
+Climate Hazards Group InfraRed Precipitation with Stations (CHIRPS) is a long-term quasi-global rainfall dataset developed by the Climate Hazards Center at the University of California, Santa Barbara. CHIRPS combines satellite imagery with ground-based station observations to produce gridded precipitation estimates suitable for drought monitoring, climate assessment, and hydrological analysis. 
 
 Dataset Used: UCSB-CHG/CHIRPS/DAILY
 Variable:precipitation, daily precipitation estimates derived from infrared satellite observations merged with in-situ station measurements.
