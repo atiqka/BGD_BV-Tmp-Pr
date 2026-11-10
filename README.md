@@ -18,7 +18,7 @@ Traditional climate maps generally visualize one variable at a time, which can l
  
 Such classifications provide a richer understanding of climate dynamics compared to single-variable maps. This exercise demonstrates how cloud-based climate datasets available through Google Earth Engine can be combined with modern cartographic techniques in R to produce both 2D and 3D climate visualizations. 
 
-We acknowledge and thank Milos for the initial approach developed for bivariate modeling. This exercise builds on that initial approach and is curated by the author with contextualized datasets, tapping other datasets, variations, localization, and a curated methodology for applications. 
+I acknowledge and thank Milos for the initial approach to this bivariate modeling. This exercise builds on that initial approach, and I further curated it with contextualized and additional datasets, variations, localization, and a specific methodology for applications. 
  
 ---
  
