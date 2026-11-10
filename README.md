@@ -15,7 +15,7 @@ Traditional climate maps generally visualize one variable at a time, which can l
 - Cool and dry
 - Intermediate climate zones
  
-Such classifications provide a richer understanding of climate dynamics compared to single-variable maps. This exercise demonstrates how cloud-based climate datasets available through Google Earth Engine can be combined with modern cartographic techniques in R to produce both 2D and 3D climate visualizations. Acknowledgment for the initial methodology goes to Milos. 
+Such classifications provide a richer understanding of climate dynamics compared to single-variable maps. This exercise demonstrates how cloud-based climate datasets available through Google Earth Engine can be combined with modern cartographic techniques in R to produce both 2D and 3D climate visualizations. We thank Milos for the initial approach on which this exercise builds on, and additionally curate contextualized datasets, variations, and methodology. 
 
 The output map is shown here. https://github.com/atiqka/BGD_BV-Tmp-Pr/blob/main/BGD_Bivariate-tmp-pr.png
  
@@ -76,8 +76,6 @@ This project integrates multiple globally recognized geospatial and climate data
 
 ## 1. ERA5-Land Climate Reanalysis
 
-## Overview
-
 ERA5-Land is a global land-surface reanalysis dataset produced by the European Centre for Medium-Range Weather Forecasts (ECMWF). It provides a physically consistent reconstruction of historical climate conditions by combining numerical weather models with observational data. ERA5-Land is specifically designed to improve land-surface representation relative to the standard ERA5 reanalysis. 【1-99390a】
 
 ## Dataset Used
@@ -125,8 +123,6 @@ Copernicus Climate Change Service (C3S)
 ---
 
 ## 2. CHIRPS Precipitation
-
-## Overview
 
 Climate Hazards Group InfraRed Precipitation with Stations (CHIRPS) is a long-term quasi-global rainfall dataset developed by the Climate Hazards Center at the University of California, Santa Barbara. CHIRPS combines satellite imagery with ground-based station observations to produce gridded precipitation estimates suitable for drought monitoring, climate assessment, and hydrological analysis. 【2-5559f6】
 
@@ -176,8 +172,6 @@ University of California, Santa Barbara (UCSB)
 
 ## 3. Administrative Boundaries
 
-## Overview
-
 National boundaries for Bangladesh were obtained using the GADM database through the R package geodata.
 
 GADM is one of the most widely used global administrative boundary databases and provides harmonized boundary datasets for countries and subnational administrative units worldwide. The current database contains hundreds of thousands of administrative areas globally. 【3-c058fb】【4-97bdab】
@@ -204,11 +198,7 @@ GADM Database of Global Administrative Areas
 
 ## 4. Digital Elevation Model (DEM)
 
-## Overview
-
-Terrain elevation data are obtained using the elevatr package, which accesses Shuttle Radar Topography Mission (SRTM) elevation products.
-
-The SRTM mission was jointly conducted by NASA and the National Geospatial-Intelligence Agency (NGA) and produced one of the most widely used global digital elevation datasets. SRTM data provide near-global land-surface elevation coverage at approximately 30-meter resolution. 【5-933c94】【6-3d171d】
+Terrain elevation data are obtained using the elevatr package, which accesses Shuttle Radar Topography Mission (SRTM) elevation products. The SRTM mission was jointly conducted by NASA and the National Geospatial-Intelligence Agency (NGA) and produced one of the most widely used global digital elevation datasets. SRTM data provide near-global land-surface elevation coverage at approximately 30-meter resolution. 【5-933c94】【6-3d171d】
 
 ## Dataset
 
@@ -239,42 +229,6 @@ National Geospatial-Intelligence Agency (NGA)
 
 ---
 
-## Data Processing Workflow
-
-The workflow integrates the above datasets through the following sequence:
-
-```text
-ERA5-Land Temperature
-          │
-          ▼
-      Earth Engine
-          │
-          ▼
-  Multi-Year Mean Surface
-          │
-          ▼
-          ├───────────────┐
-          │               │
-          ▼               ▼
-CHIRPS Rainfall      Bangladesh Boundary
-          │               │
-          ▼               ▼
-  Multi-Year Total     National Mask
-          │               │
-          └───────┬───────┘
-                  ▼
-        Raster Harmonization
-                  ▼
-      Bivariate Classification
-                  ▼
-          2D Climate Mapping
-                  ▼
-            DEM Integration
-                  ▼
-          3D Visualization
-```
-
----
 
 ## License
 
