@@ -16,7 +16,9 @@ Traditional climate maps generally visualize one variable at a time, which can l
 - Cool and dry
 - Intermediate climate zones
  
-Such classifications provide a richer understanding of climate dynamics compared to single-variable maps. This exercise demonstrates how cloud-based climate datasets available through Google Earth Engine can be combined with modern cartographic techniques in R to produce both 2D and 3D climate visualizations. We thank Milos for the initial approach on which this exercise builds on, and additionally curate contextualized datasets, variations, and methodology. 
+Such classifications provide a richer understanding of climate dynamics compared to single-variable maps. This exercise demonstrates how cloud-based climate datasets available through Google Earth Engine can be combined with modern cartographic techniques in R to produce both 2D and 3D climate visualizations. 
+
+We acknowledge and thank Milos for the initial approach developed for bivariate modeling. This exercise builds on that initial approach and is curated by the author with contextualized datasets, tapping other datasets, variations, localization, and a curated methodology for applications. 
  
 ---
  
@@ -75,7 +77,7 @@ This project integrates multiple globally recognized geospatial and climate data
 
 ## 1. ERA5-Land Climate Reanalysis
 
-ERA5-Land is a global land-surface reanalysis dataset produced by the European Centre for Medium-Range Weather Forecasts (ECMWF). It provides a physically consistent reconstruction of historical climate conditions by combining numerical weather models with observational data. ERA5-Land is specifically designed to improve land-surface representation relative to the standard ERA5 reanalysis. 【1-99390a】
+ERA5-Land is a global land-surface reanalysis dataset produced by the European Centre for Medium-Range Weather Forecasts (ECMWF). It provides a physically consistent reconstruction of historical climate conditions by combining numerical weather models with observational data. ERA5-Land is specifically designed to improve land-surface representation relative to the standard ERA5 reanalysis. 
 
 Dataset Used: ECMWF/ERA5_LAND/HOURLY
 Variable: temperature_2m
