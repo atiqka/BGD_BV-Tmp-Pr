@@ -1,4 +1,4 @@
-# Bangladesh Bivariate Climate Mapping and 3D Visualization (2018–2022)
+# Bangladesh Bivariate Climate Mapping and Visualization (2018–2022)
 
 Author: Atiq Kainan Ahmed. Email: atiqka@yahoo.com
 
@@ -16,10 +16,8 @@ Traditional climate maps generally visualize one variable at a time, which can l
 - Cool and dry
 - Intermediate climate zones
  
-Such classifications provide a richer understanding of climate dynamics compared to single-variable maps. This exercise demonstrates how cloud-based climate datasets available through Google Earth Engine can be combined with modern cartographic techniques in R to produce both 2D and 3D climate visualizations. 
+These classifications provide a richer understanding of climate dynamics than single-variable maps. This exercise demonstrates how cloud-based climate datasets available through Google Earth Engine can be combined with modern cartographic techniques in R to produce bivariate climate visualizations. 
 
-I acknowledge and thank Milos for the initial approach to this bivariate modeling. This exercise builds on that initial approach, and I further curated it with contextualized and additional datasets, variations, localization, and a specific methodology for applications. 
- 
 ---
  
 ## Objectives
@@ -94,7 +92,7 @@ Data Provider: European Centre for Medium-Range Weather Forecasts (ECMWF), Coper
 Climate Hazards Group InfraRed Precipitation with Stations (CHIRPS) is a long-term quasi-global rainfall dataset developed by the Climate Hazards Center at the University of California, Santa Barbara. CHIRPS combines satellite imagery with ground-based station observations to produce gridded precipitation estimates suitable for drought monitoring, climate assessment, and hydrological analysis. 
 
 Dataset Used: UCSB-CHG/CHIRPS/DAILY
-Variable:precipitation, daily precipitation estimates derived from infrared satellite observations merged with in-situ station measurements.
+Variable: precipitation, daily precipitation estimates derived from infrared satellite observations merged with in-situ station measurements.
 Temporal Coverage: 1981 – Present
 Temporal Resolution: Daily
 Spatial Resolution: 0.05°(~5.6 km)
@@ -120,6 +118,13 @@ Dataset: SRTM Digital Elevation Model
 Resolution: 1 Arc-Second (~30 meters)
 Coverage:  Global land surface between 60°N and 56°S
 Data Provider: NASA, United States Geological Survey (USGS), National Geospatial-Intelligence Agency (NGA)
+
+---
+
+## Acknowledgement
+
+Thanks to Milos Popovic for developing the initial approach to this bivariate mapping. This exercise builds on it and further curates it with contextualized and different datasets, variations, and methodological applications. 
+ 
 
 ---
 
